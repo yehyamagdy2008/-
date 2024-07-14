@@ -104,16 +104,13 @@ let card7 = document.querySelector(
 
 function changeImg(Proimg, card, imge1, imge2) {
   document.addEventListener("DOMContentLoaded", () => {
+    let originalSrc = Proimg.src; // حفظ مسار الصورة الأصلية
     card.addEventListener("mouseenter", () => {
       Proimg.src = imge2;
     });
 
     card.addEventListener("mouseleave", () => {
-      const imgSrc = new URL(Proimg.src).pathname;
-      const expectedSrc = new URL(imge2, window.location.origin).pathname;
-      if (imgSrc === expectedSrc) {
-        Proimg.src = imge1;
-      }
+      Proimg.src = originalSrc;
     });
   });
 }
@@ -130,5 +127,3 @@ changeImg(img4, card4, "./img/dhad.png", "./img/dhad(1).png");
 changeImg(img5, card5, "./img/corporate.png", "./img/corporate(1).png");
 changeImg(img6, card6, "./img/lesson.png", "./img/lesson(1).png");
 changeImg(img7, card7, "./img/couple.png", "./img/couple(1).png");
-
-
