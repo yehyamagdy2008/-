@@ -4,7 +4,7 @@ let bg_header2 = bg_header.offsetTop;
 let co_nav = document.querySelectorAll("header nav ul li a");
 let ab = document.querySelectorAll(".humburger-button span");
 /* End scroll header */
-document.addEventListener("scroll", () => {
+function handleScroll() {
   let scroll_position = window.scrollY;
   if (scroll_position > 100) {
     bg_header.style.background = "#2e7d32";
@@ -25,7 +25,11 @@ document.addEventListener("scroll", () => {
       e.style.background = "black";
     });
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", handleScroll);
+
+document.addEventListener("scroll", handleScroll);
 /*End  scroll header */
 let humburger_button = document.querySelector(".humburger-button");
 let humburger_child1 = document.querySelector(
