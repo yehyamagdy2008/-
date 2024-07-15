@@ -3,7 +3,7 @@ let bg_header_small = document.querySelector(".small-screen-header");
 let bg_header2 = bg_header.offsetTop;
 let co_nav = document.querySelectorAll("header nav ul li a");
 let ab = document.querySelectorAll(".humburger-button span");
-
+/* End scroll header */
 document.addEventListener("scroll", () => {
   let scroll_position = window.scrollY;
   if (scroll_position > 100) {
@@ -26,13 +26,14 @@ document.addEventListener("scroll", () => {
     });
   }
 });
-
+/*End  scroll header */
 let a = document.querySelector(".humburger-button");
 let b = document.querySelector(".humburger-button span:first-child");
 let c = document.querySelector(".humburger-button span:nth-child(2)");
 let d = document.querySelector(".humburger-button span:last-child");
 let f = document.querySelector(".nav-header-small-screen");
 let v = document.querySelectorAll(".nav-header-small-screen ul li");
+/* Start humburger button*/
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -48,7 +49,6 @@ function nn() {
   document.body.classList.toggle("over-flow");
   scrollToTop();
 }
-
 a.addEventListener("click", () => {
   nn();
 });
@@ -58,6 +58,7 @@ v.forEach((e) => {
     nn();
   });
 });
+/* End humburger button*/
 let img1 = document.querySelector(
   ".Services .container-cards .card:nth-child(1) .img-card img:nth-child(1)"
 );
@@ -101,10 +102,18 @@ let card6 = document.querySelector(
 let card7 = document.querySelector(
   ".Services .container-cards .card:nth-child(7)"
 );
+/*Start action Services */
+function preloadImage(src) {
+  let img = new Image();
+  img.src = src;
+}
 
-function changeImg(Proimg, card, imge1, imge2) {
+function changeImg(Proimg, card, imge2) {
   document.addEventListener("DOMContentLoaded", () => {
     let originalSrc = Proimg.src; // حفظ مسار الصورة الأصلية
+
+    preloadImage(imge2); // تحميل الصورة الجديدة مسبقًا
+
     card.addEventListener("mouseenter", () => {
       Proimg.src = imge2;
     });
@@ -115,15 +124,12 @@ function changeImg(Proimg, card, imge1, imge2) {
   });
 }
 
-changeImg(img1, card1, "./img/moslem(1).png", "./img/moslem(2).png");
-changeImg(
-  img2,
-  card2,
-  "./img/wedding-contract.png",
-  "./img/wedding-contract(1).png"
-);
-changeImg(img3, card3, "./img/quran.png", "./img/quran(1).png");
-changeImg(img4, card4, "./img/dhad.png", "./img/dhad(1).png");
-changeImg(img5, card5, "./img/corporate.png", "./img/corporate(1).png");
-changeImg(img6, card6, "./img/lesson.png", "./img/lesson(1).png");
-changeImg(img7, card7, "./img/couple.png", "./img/couple(1).png");
+changeImg(img1, card1, "./img/moslem(2).png");
+changeImg(img2, card2, "./img/wedding-contract(1).png");
+changeImg(img3, card3, "./img/quran(1).png");
+changeImg(img4, card4, "./img/dhad(1).png");
+changeImg(img5, card5, "./img/corporate(1).png");
+changeImg(img6, card6, "./img/lesson(1).png");
+changeImg(img7, card7, "./img/couple(1).png");
+
+/*End action Services */
