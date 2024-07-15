@@ -27,35 +27,43 @@ document.addEventListener("scroll", () => {
   }
 });
 /*End  scroll header */
-let a = document.querySelector(".humburger-button");
-let b = document.querySelector(".humburger-button span:first-child");
-let c = document.querySelector(".humburger-button span:nth-child(2)");
-let d = document.querySelector(".humburger-button span:last-child");
-let f = document.querySelector(".nav-header-small-screen");
-let v = document.querySelectorAll(".nav-header-small-screen ul li");
+let humburger_button = document.querySelector(".humburger-button");
+let humburger_child1 = document.querySelector(
+  ".humburger-button span:first-child"
+);
+let humburger_child2 = document.querySelector(
+  ".humburger-button span:nth-child(2)"
+);
+let humburger_child3 = document.querySelector(
+  ".humburger-button span:last-child"
+);
+let header_sm_screen = document.querySelector(".nav-header-small-screen");
+let header_sm_link = document.querySelectorAll(
+  ".nav-header-small-screen ul li"
+);
 /* Start humburger button*/
 function scrollToTop() {
   window.scrollTo({
     top: 0,
   });
 }
-function nn() {
-  b.classList.toggle("posistion");
-  d.classList.toggle("posistion");
-  c.classList.toggle("hidden-burger");
-  b.classList.toggle("mark1");
-  d.classList.toggle("mark2");
-  f.classList.toggle("display-flex");
+function Formats_humburger() {
+  humburger_child1.classList.toggle("posistion");
+  humburger_child3.classList.toggle("posistion");
+  humburger_child2.classList.toggle("hidden-burger");
+  humburger_child1.classList.toggle("mark1");
+  humburger_child3.classList.toggle("mark2");
+  header_sm_screen.classList.toggle("display-flex");
   document.body.classList.toggle("over-flow");
   scrollToTop();
 }
-a.addEventListener("click", () => {
-  nn();
+humburger_button.addEventListener("click", () => {
+  Formats_humburger();
 });
 
-v.forEach((e) => {
+header_sm_link.forEach((e) => {
   e.addEventListener("click", () => {
-    nn();
+    Formats_humburger();
   });
 });
 /* End humburger button*/
