@@ -335,21 +335,7 @@ a {
   margin-inline-start: 0;
   margin-bottom: 50px;
 }
-.About .about-Side-title {
-  margin-inline-start: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 575px;
-}
-.About .about-Side-title li {
-  font-size: 20px;
-  list-style: inside;
-}
-.About .about-Side-title li a {
-  font-weight: bold;
-  cursor: pointer;
-}
+
 .About .features {
   display: flex;
   flex-direction: column;
@@ -366,7 +352,6 @@ a {
   align-items: center;
   flex-direction: row-reverse;
 }
-
 .About .features .feature p {
   font-size: 20px;
   font-weight: 500;

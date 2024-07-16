@@ -72,27 +72,29 @@ header_sm_link.forEach((e) => {
 });
 /* End humburger button*/
 let img1 = document.querySelector(
-  ".Services .container-cards .card:nth-child(1) .img-card img:nth-child(1)"
+  ".Services .container-cards .card:nth-child(1) .img-card img"
 );
 let img2 = document.querySelector(
-  ".Services .container-cards .card:nth-child(2) .img-card img:nth-child(1)"
+  ".Services .container-cards .card:nth-child(2) .img-card img"
 );
 let img3 = document.querySelector(
-  ".Services .container-cards .card:nth-child(3) .img-card img:nth-child(1)"
+  ".Services .container-cards .card:nth-child(3) .img-card img"
 );
 let img4 = document.querySelector(
-  ".Services .container-cards .card:nth-child(4) .img-card img:nth-child(1)"
+  ".Services .container-cards .card:nth-child(4) .img-card img"
 );
 let img5 = document.querySelector(
-  ".Services .container-cards .card:nth-child(5) .img-card img:nth-child(1)"
+  ".Services .container-cards .card:nth-child(5) .img-card img"
 );
 let img6 = document.querySelector(
-  ".Services .container-cards .card:nth-child(6) .img-card img:nth-child(1)"
+  ".Services .container-cards .card:nth-child(6) .img-card img"
 );
 let img7 = document.querySelector(
-  ".Services .container-cards .card:nth-child(7) .img-card img:nth-child(1)"
+  ".Services .container-cards .card:nth-child(7) .img-card img"
 );
-
+let img8 = document.querySelector(
+  ".Services .container-cards .card:nth-child(8) .img-card img"
+);
 let card1 = document.querySelector(
   ".Services .container-cards .card:nth-child(1)"
 );
@@ -113,6 +115,9 @@ let card6 = document.querySelector(
 );
 let card7 = document.querySelector(
   ".Services .container-cards .card:nth-child(7)"
+);
+let card8 = document.querySelector(
+  ".Services .container-cards .card:nth-child(8)"
 );
 /*Start action Services */
 function preloadImage(src) {
@@ -137,11 +142,12 @@ function changeImg(Proimg, card, imge2) {
 }
 
 changeImg(img1, card1, "./img/moslem(2).png");
-changeImg(img2, card2, "./img/wedding-contract(1).png");
-changeImg(img3, card3, "./img/quran(1).png");
-changeImg(img4, card4, "./img/dhad(1).png");
-changeImg(img5, card5, "./img/corporate(1).png");
-changeImg(img6, card6, "./img/lesson(1).png");
-changeImg(img7, card7, "./img/couple(1).png");
+changeImg(img2, card2, "./img/newlyweds(1).png");
+changeImg(img3, card3, "./img/wedding-contract(1).png");
+changeImg(img4, card4, "./img/quran(1).png");
+changeImg(img5, card5, "./img/dhad(1).png");
+changeImg(img6, card6, "./img/corporate(1).png");
+changeImg(img7, card7, "./img/lesson(1).png");
+changeImg(img8, card8, "./img/couple(1).png");
 
 /*End action Services */
