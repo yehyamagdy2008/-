@@ -95,6 +95,9 @@ let img7 = document.querySelector(
 let img8 = document.querySelector(
   ".Services .container-cards .card:nth-child(8) .img-card img"
 );
+let img9 = document.querySelector(
+  ".Services .container-cards .card:nth-child(9) .img-card img"
+);
 let card1 = document.querySelector(
   ".Services .container-cards .card:nth-child(1)"
 );
@@ -118,6 +121,9 @@ let card7 = document.querySelector(
 );
 let card8 = document.querySelector(
   ".Services .container-cards .card:nth-child(8)"
+);
+let card9 = document.querySelector(
+  ".Services .container-cards .card:nth-child(9)"
 );
 /*Start action Services */
 function preloadImage(src) {
@@ -149,5 +155,6 @@ changeImg(img5, card5, "./img/dhad(1).png");
 changeImg(img6, card6, "./img/corporate(1).png");
 changeImg(img7, card7, "./img/lesson(1).png");
 changeImg(img8, card8, "./img/couple(1).png");
+changeImg(img9, card9, "./img/quran-2.png");
 
 /*End action Services */
